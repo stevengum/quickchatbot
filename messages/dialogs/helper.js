@@ -1,5 +1,5 @@
 /* Storage for helper functions */
-let config = require('../config.js').config;
+// let config = require('../config.js').config;
 
 
 var helper = (function () {
