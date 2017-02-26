@@ -15,7 +15,7 @@ var connector = useEmulator ? new builder.ChatConnector() : new botbuilder_azure
 /* end of deployable section */
 
 /* This line allows the bot to be worked on without using Visual Studio, and only using the CLI  */
-var connector = new builder.ConsoleConnector().listen();
+// var connector = new builder.ConsoleConnector().listen();
 
 var bot = new builder.UniversalBot(connector);
 

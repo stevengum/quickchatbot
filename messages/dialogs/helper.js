@@ -6,14 +6,14 @@ var helper = (function () {
     return {
         helperTest: true,
         LUISCall: function(request) {
-        		let options = {
-        			host: config.LuisAPIHostName,
-        			path: '/luis/v2.0/apps/' + config.LuisAppId + '?subscription-key=' + config.LuisAPIKey + "&q=" + request.replace(/ /g, '%20')
-        		};
-                // let options = {
-                //     host: luisAPIHostName,
-                //     path: '/luis/v2.0/apps/' + luisAppId + '?subscription-key=' + luisAPIKey + "&q=" + request.replace(/ /g, '%20')
-                // }
+        		// let options = {
+        		// 	host: config.LuisAPIHostName,
+        		// 	path: '/luis/v2.0/apps/' + config.LuisAppId + '?subscription-key=' + config.LuisAPIKey + "&q=" + request.replace(/ /g, '%20')
+        		// };
+                let options = {
+                    host: luisAPIHostName,
+                    path: '/luis/v2.0/apps/' + luisAppId + '?subscription-key=' + luisAPIKey + "&q=" + request.replace(/ /g, '%20')
+                }
         		let response = "";
 
         		return new Promise(function(resolve, reject){
@@ -36,7 +36,7 @@ var helper = (function () {
         },
         SWAPICall: function(requestObj) {
             // "requestObj.type" == "entity.type"
-            // "requestObj.type.split.(".")[0]" == "entity.entity"
+            // "requestObj.type.split.(".")[0]" == "entity."entity""
             let schema = requestObj.type.split(".")[0];
             let queryString = requestObj.entity;
 
