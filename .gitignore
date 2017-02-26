@@ -1,0 +1,7 @@
+**/*/node_modules/
+typings/
+node_modules/
+*.js.map
+config.js
+messages/dialogs/GetPlanet.js
+messages/dialogs/FindPerson.js
